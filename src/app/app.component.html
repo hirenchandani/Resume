@@ -1,0 +1,204 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        OBJECTIVE
+      </mat-panel-title>
+      <mat-panel-description>
+        Expand To See Objectives
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p> A self-motivated IT developer with 2+ years of professional experience in software analysis, design and
+      development. </p>
+    <p>Project management and customer-focused implementation.</p>
+    <p>Capable of developing both client and server side portions of large or small applications</p>
+    <p>I am Quick learner person adopting new technologies easily.</p>
+
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        ACADEMIC QUALIFICATIONS
+      </mat-panel-title>
+      <mat-panel-description>
+        Expand To See ACADEMIC QUALIFICATIONS
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <table mat-table [dataSource]="this.dataSource" class="mat-elevation-z8 demo-table">
+      <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+        <th mat-header-cell *matHeaderCellDef>
+          {{column.header}}
+        </th>
+        <td mat-cell *matCellDef="let row">
+          {{column.cell(row)}}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        TECHNICAL SKILLS
+      </mat-panel-title>
+      <mat-panel-description>
+        Expand To See TECHNICAL SKILLS
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-tab-group>
+      <mat-tab label="Front-End Technologies">
+
+        <mat-selection-list>
+          <mat-list-item *ngFor="let product of typesOfShoes">
+            {{ product }}
+          </mat-list-item>
+        </mat-selection-list>
+
+      </mat-tab>
+
+      <mat-tab label="Backed-End Technologies">
+        <mat-list role="list">
+          <mat-list-item role="SQL">SQL</mat-list-item>
+          <mat-list-item role="PostgreSQL">PostgreSQL</mat-list-item>
+          <mat-list-item role="Oracle">Oracle,</mat-list-item>
+        </mat-list>
+      </mat-tab>
+
+      <mat-tab label="Programming Languages">
+
+        <mat-list role="list">
+          <mat-list-item role="C#">C#</mat-list-item>
+          <mat-list-item role="Java">Java</mat-list-item>
+        </mat-list>
+
+      </mat-tab>
+
+      <mat-tab label=".Net Technologies">
+
+        <mat-list role="list">
+          <mat-list-item role=".NetCore">.NetCore</mat-list-item>
+          <mat-list-item role="WebAPI">WebAPI</mat-list-item>
+          <mat-list-item role="WCF">WCF</mat-list-item>
+          <mat-list-item role="ASP.NET MVC">ASP.NET MVC</mat-list-item>
+          <mat-list-item role="Entity Framework">Entity Framework</mat-list-item>
+
+        </mat-list>
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Projects
+      </mat-panel-title>
+      <mat-panel-description>
+        Expand To See Projects
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+    <table mat-table matSort [dataSource]="dataSourceTwo" class="mat-elevation-z8" style="width: 100%;">
+
+      <ng-container matColumnDef="projectTitle">
+        <th mat-header-cell *matHeaderCellDef>Project Title</th>
+        <td mat-cell *matCellDef="let element">{{ element.projectTitle }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="projectDesc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Project Desc</th>
+        <td mat-cell *matCellDef="let element">{{ element.projectDesc }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsTwo"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsTwo"></tr>
+    </table>
+
+  </mat-expansion-panel>
+
+
+
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        PROFESSIONAL WORKING HISTORY :
+      </mat-panel-title>
+      <mat-panel-description>
+        Expand To See PROFESSIONAL WORKING HISTORY :
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-horizontal-stepper>
+
+      <mat-step label="GEP">
+        <h2>
+          <i class="designationStyle">Full Stack Developer</i>
+        </h2>
+        <mat-selection-list>
+          <mat-list-item class="designationDescription" *ngFor="let gep of gepwork">
+            {{ gep }}
+          </mat-list-item>
+        </mat-selection-list>
+      </mat-step>
+
+      <mat-step label="Reliance Industry Limited">Dot Net Developer (Software Engineer)
+        Reliance Industry Limited
+      </mat-step>
+
+      <mat-step label="Dr. Reddys Laboratories">
+        Dr. Reddys Laboratories
+      </mat-step>
+
+      <mat-step label="Global Tech India Pvt. Ltd">
+        Global Tech India Pvt. Ltd
+      </mat-step>
+
+    </mat-horizontal-stepper>
+
+
+  </mat-expansion-panel>
+
+
+
+
+  <mat-expansion-panel>
+  
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+      HOBBIES
+      </mat-panel-title>
+      <mat-panel-description>
+        Expand To See HOBBIES :
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+  
+    Reading Articles On Technologies
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+
+<mat-form-field appearance="fill">
+  <mat-label></mat-label>
+  <input matInput value="I do here by declare that all the information given above is true to the best of my knowledge and belief!" #message>
+</mat-form-field>
+
+<button mat-stroked-button (click)="openSnackBar(message.value)">Show Declaration</button>
+
+<router-outlet></router-outlet>

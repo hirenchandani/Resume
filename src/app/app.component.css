@@ -1,0 +1,23 @@
+.demo-table {
+  width: 100%;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.designationStyle
+{
+  color: hotpink; 
+  font-family:'Times New Roman';
+}
+
+.designationDescription
+{
+  color: #4b0082;
+   font-family:'Lucida Sans' ;
+}
